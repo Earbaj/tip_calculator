@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="enter_the_trip_cost">Enter the trip cost</string>
+    <string name="calculate_cost">Calculate Cost</string>
+    <string name="round_trip">Round Trip?</string>
+    <string name="as_usual_trip_10">As usual trip 10%</string>
+    <string name="medium_trip_15">Medium trip 15%</string>
+    <string name="special_trip_25">Special trip 25%</string>
+    <string name="select_trip_discount">Select trip discount</string>
+</resources>
