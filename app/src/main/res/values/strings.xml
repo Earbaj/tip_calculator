@@ -7,4 +7,5 @@
     <string name="medium_trip_15">Medium trip 15%</string>
     <string name="special_trip_25">Special trip 25%</string>
     <string name="select_trip_discount">Select trip discount</string>
+    <string name="tip_amount">Tip Amount: %s</string>
 </resources>
