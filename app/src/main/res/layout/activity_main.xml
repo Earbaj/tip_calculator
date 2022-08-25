@@ -3,22 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/et_trip_cost"
-        android:hint="@string/enter_the_trip_cost"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:inputType="numberDecimal"
-        android:autofillHints="40.0" />
-    <TextView
-        android:text="@string/select_trip_discount"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:textSize="18dp"
-        android:layout_height="wrap_content"/>
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:paddingRight="5dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_store_24"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cost_of_service"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Cost">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_trip_cost"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="numberDecimal"
+                android:autofillHints="40.0"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_baseline_room_service_24"
+            android:layout_width="35dp"
+            android:layout_gravity="center"
+            android:paddingRight="5dp"
+            android:layout_height="35dp"/>
+        <TextView
+            android:text="@string/select_trip_discount"
+            android:layout_width="wrap_content"
+            style="@style/Widget.TipTime.TextView"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
     <RadioGroup
         android:padding="5dp"
         android:id="@+id/rd_group"
@@ -28,18 +63,21 @@
             android:id="@+id/rdb_spcial"
             android:text="@string/special_trip_25"
             android:textSize="16dp"
+            style="@style/Widget.TipTime.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <RadioButton
             android:id="@+id/rdb_medium"
             android:text="@string/medium_trip_15"
             android:textSize="16dp"
+            style="@style/Widget.TipTime.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <RadioButton
             android:id="@+id/rdb_asusual"
             android:text="@string/as_usual_trip_10"
             android:textSize="16dp"
+            style="@style/Widget.TipTime.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RadioGroup>
@@ -48,15 +86,23 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_baseline_trip_origin_24"
+            android:layout_width="35dp"
+            android:paddingRight="5dp"
+            android:layout_weight="0"
+            android:layout_height="wrap_content"/>
         <TextView
             android:text="@string/round_trip"
             android:layout_width="0dp"
             android:textSize="18dp"
+            style="@style/Widget.TipTime.TextView"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
-        <Switch
+        <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/sw_roundtrip"
             android:layout_width="0dp"
+            android:checked="true"
             android:layout_weight="1"
             android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -65,7 +111,9 @@
         android:padding="5dp"
         android:id="@+id/btn_calculate"
         android:text="@string/calculate_cost"
-        android:layout_width="match_parent"
+        android:background="#6CA71F"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"/>
 
     <TextView
@@ -73,6 +121,7 @@
         tools:text="Tip Amount: $10"
         android:layout_gravity="right"
         android:textSize="18dp"
+        style="@style/Widget.TipTime.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
